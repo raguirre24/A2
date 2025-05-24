@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Application of EVM in NZ Construction Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">EVM Research</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#methodology" class="nav-link">Methodology</a></li>
+                <li><a href="#framework" class="nav-link">Framework</a></li>
+                <li><a href="#dashboards" class="nav-link">Dashboards</a></li>
+                <li><a href="#case-study" class="nav-link">Case Study</a></li>
+                <li><a href="#benefits" class="nav-link">Benefits</a></li>
+                <li><a href="#conclusion" class="nav-link">Conclusion</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Practical Application of Earned Value Management in New Zealand Construction Projects</h1>
+            <p class="hero-subtitle">Developing a practical framework for implementing EVM as a daily tool in construction project management</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>80%</h3>
+                    <p>Research Complete</p>
+                </div>
+                <div class="stat">
+                    <h3>90%</h3>
+                    <p>Projects Experience Delays</p>
+                </div>
+                <div class="stat">
+                    <h3>4%</h3>
+                    <p>Cost Savings Achieved</p>
+                </div>
+            </div>
+            <a href="#introduction" class="cta-button">Explore Research</a>
+        </div>
+        <div class="hero-visual">
+            <canvas id="heroChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="section">
+        <div class="container">
+            <h2 class="section-title">Introduction & Overview</h2>
+            <div class="content-grid">
+                <div class="content-main">
+                    <h3>Background</h3>
+                    <p>The construction industry in New Zealand plays a vital role in the nation's economy, contributing approximately 7% of GDP and employing over 300,000 people. Despite its significance, the sector faces persistent challenges including cost overruns, schedule delays, and quality concerns.</p>
+                    
+                    <p>Recent surveys reveal that 90% of contractors experienced project delays in the past six months, while 83% identified rising costs as a significant challenge. These statistics underscore the critical need for effective project management tools and methodologies.</p>
+
+                    <h3>The Promise of EVM</h3>
+                    <p>Earned Value Management (EVM) offers a practical solution to address project uncertainty in the current economic environment. By providing early warning signs of potential schedule delays or budget overruns, EVM equips project managers with the data necessary to make informed adjustments.</p>
+                </div>
+                <div class="content-sidebar">
+                    <div class="info-card">
+                        <h4>Key Challenge</h4>
+                        <p>NZTA's new Physical Works Schedule Standard mandates EVM reporting for all capital works projects exceeding $5 million, raising questions about industry readiness.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Research Objectives</h4>
+                        <ul>
+                            <li>Assess EVM adoption in NZ construction</li>
+                            <li>Identify influencing factors</li>
+                            <li>Provide practical recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Theoretical Basis & Methodology</h2>
+            <div class="methodology-grid">
+                <div class="method-card">
+                    <div class="method-icon">📊</div>
+                    <h3>Core EVM Principles</h3>
+                    <p>EVM integrates scope, schedule, and cost parameters to assess project performance objectively through three core principles:</p>
+                    <ul>
+                        <li><strong>Planning:</strong> Defining project scope and integrated baseline</li>
+                        <li><strong>Measuring Progress:</strong> Objective tracking of completed work</li>
+                        <li><strong>Performance Analysis:</strong> Identifying deviations and trends</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">📈</div>
+                    <h3>Key Metrics</h3>
+                    <p>Essential EVM metrics provide insights into project health:</p>
+                    <ul>
+                        <li><strong>PV (Planned Value):</strong> Budgeted cost of scheduled work</li>
+                        <li><strong>EV (Earned Value):</strong> Budgeted cost of performed work</li>
+                        <li><strong>AC (Actual Cost):</strong> Actual cost of performed work</li>
+                        <li><strong>CPI & SPI:</strong> Cost and Schedule Performance Indices</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">🔍</div>
+                    <h3>Research Approach</h3>
+                    <p>This research employed a mixed-methods approach:</p>
+                    <ul>
+                        <li>Literature review of international EVM standards</li>
+                        <li>Interviews with NZ project controls professionals</li>
+                        <li>Case study analysis of the Rā Hihi project</li>
+                        <li>Comparative analysis with international practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Section -->
+    <section id="framework" class="section">
+        <div class="container">
+            <h2 class="section-title">The Proposed EVM Framework</h2>
+            <div class="framework-content">
+                <p class="framework-intro">Based on research findings and the Rā Hihi case study, this framework provides practical guidelines for implementing EVM in New Zealand construction projects.</p>
+                
+                <div class="framework-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Integration with Existing Systems</h3>
+                        <p>Leverage existing Cost Breakdown Structure (CBS) and scheduling software. Map cost codes to schedule activities without requiring specialized EVM software.</p>
+                        <div class="step-details">
+                            <h4>Key Actions:</h4>
+                            <ul>
+                                <li>Align WBS with CBS framework</li>
+                                <li>Map each schedule activity to corresponding cost codes</li>
+                                <li>Use familiar tools (P6, MS Project) for implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Budget Distribution Methodology</h3>
+                        <p>Apply appropriate budget allocation based on activity characteristics:</p>
+                        <div class="step-details">
+                            <h4>Measurable Activities:</h4>
+                            <ul>
+                                <li>Direct relationship between cost and deliverables</li>
+                                <li>Distribute budget based on quantity or units</li>
+                            </ul>
+                            <h4>Non-Measurable Activities:</h4>
+                            <ul>
+                                <li>Use daily rate approach for time-based activities</li>
+                                <li>Account for advance payments and procurement</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Data Integration Platform</h3>
+                        <p>Implement accessible reporting solutions that integrate multiple data sources:</p>
+                        <div class="step-details">
+                            <h4>Recommendations:</h4>
+                            <ul>
+                                <li>Use Power BI or similar for automated integration</li>
+                                <li>Connect financial systems with scheduling databases</li>
+                                <li>Create user-friendly dashboards for all stakeholders</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Monthly Review Process</h3>
+                        <p>Establish structured performance review cycles:</p>
+                        <div class="step-details">
+                            <h4>Review Components:</h4>
+                            <ul>
+                                <li>Update schedule progress and earned value</li>
+                                <li>Reconcile actual costs from financial systems</li>
+                                <li>Analyze variances and performance indices</li>
+                                <li>Validate metrics with construction engineers</li>
+                                <li>Forecast completion based on current trends</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="framework-benefits">
+                    <h3>Framework Benefits</h3>
+                    <div class="benefit-grid">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <p>Minimal disruption to existing processes</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <p>Leverages familiar tools and systems</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <p>Provides early warning of issues</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <p>Enhances decision-making with data</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <p>Improves stakeholder communication</p>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <p>Meets NZTA compliance requirements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboards Section -->
+    <section id="dashboards" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Interactive EVM Dashboards</h2>
+            <p class="section-subtitle">Explore key EVM metrics and visualizations based on typical construction project scenarios</p>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>S-Curve Analysis</h3>
+                    <p>Traditional EVM S-Curve showing Planned Value, Earned Value, and Actual Cost over time</p>
+                    <canvas id="sCurveChart"></canvas>
+                    <div class="metrics-row">
+                        <div class="metric">
+                            <span class="metric-label">SPI</span>
+                            <span class="metric-value" id="spiValue">0.95</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">CPI</span>
+                            <span class="metric-value" id="cpiValue">1.03</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">EAC</span>
+                            <span class="metric-value" id="eacValue">$9.7M</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Performance Indices Trend</h3>
+                    <p>Monthly tracking of Schedule and Cost Performance Indices</p>
+                    <canvas id="performanceChart"></canvas>
+                    <div class="chart-legend">
+                        <span class="legend-item spi">SPI - Schedule Performance</span>
+                        <span class="legend-item cpi">CPI - Cost Performance</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Variance Analysis</h3>
+                    <p>Cost and Schedule variances by project phase</p>
+                    <canvas id="varianceChart"></canvas>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Benefits Visualization</h3>
+                    <p>Key benefits of EVM implementation</p>
+                    <canvas id="benefitsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="dashboard-controls">
+                <button class="control-btn active" onclick="updateScenario('baseline')">Baseline Scenario</button>
+                <button class="control-btn" onclick="updateScenario('delayed')">Delayed Project</button>
+                <button class="control-btn" onclick="updateScenario('accelerated')">Accelerated Project</button>
+                <button class="control-btn" onclick="updateScenario('overbudget')">Over Budget Project</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section id="case-study" class="section">
+        <div class="container">
+            <h2 class="section-title">Case Study: Rā Hihi Flyover Project</h2>
+            <div class="case-study-content">
+                <div class="case-overview">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect fill='%23f0f0f0' width='800' height='400'/%3E%3Cpath d='M50 300 Q200 200 350 300 T650 300' stroke='%23333' stroke-width='8' fill='none'/%3E%3Crect x='100' y='280' width='40' height='80' fill='%23666'/%3E%3Crect x='300' y='280' width='40' height='80' fill='%23666'/%3E%3Crect x='500' y='280' width='40' height='80' fill='%23666'/%3E%3Ctext x='400' y='380' text-anchor='middle' font-family='Arial' font-size='16' fill='%23333'%3ERā Hihi Flyover Illustration%3C/text%3E%3C/svg%3E" alt="Rā Hihi Flyover" class="case-image">
+                    <div class="case-details">
+                        <h3>Project Overview</h3>
+                        <ul>
+                            <li><strong>Project:</strong> Reeves Road Flyover (Rā Hihi)</li>
+                            <li><strong>Location:</strong> Auckland, New Zealand</li>
+                            <li><strong>Duration:</strong> March 2024 - October 2025</li>
+                            <li><strong>Structure:</strong> 600m long, 10m high bridge</li>
+                            <li><strong>EVM Implementation:</strong> April 2024</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-findings">
+                    <h3>Key Implementation Steps</h3>
+                    <div class="findings-grid">
+                        <div class="finding-card">
+                            <h4>1. System Integration</h4>
+                            <p>Successfully integrated EVM with existing CBS (26 cost accounts) and Primavera P6 schedule without specialized software.</p>
+                        </div>
+                        <div class="finding-card">
+                            <h4>2. Cost Mapping</h4>
+                            <p>Mapped each P6 activity to corresponding cost codes, enabling accurate budget distribution and performance tracking.</p>
+                        </div>
+                        <div class="finding-card">
+                            <h4>3. Power BI Reporting</h4>
+                            <p>Implemented Power BI dashboards integrating JD Edwards financial data with P6 scheduling data for comprehensive reporting.</p>
+                        </div>
+                        <div class="finding-card">
+                            <h4>4. Baseline Correction</h4>
+                            <p>Addressed initial CPI discrepancies by incorporating procurement activities, improving metric accuracy.</p>
+                        </div>
+                    </div>
+
+                    <h3>Results & Achievements</h3>
+                    <div class="results-showcase">
+                        <div class="result-item">
+                            <div class="result-number">4%</div>
+                            <p>Projected cost savings</p>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">3 months</div>
+                            <p>Schedule acceleration</p>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">100%</div>
+                            <p>Stakeholder accessibility</p>
+                        </div>
+                    </div>
+
+                    <div class="lessons-learned">
+                        <h3>Lessons Learned</h3>
+                        <ul>
+                            <li>Standard construction payment practices (advance payments) must be considered in EVM implementation</li>
+                            <li>Democratizing access to performance data enhances organizational adoption</li>
+                            <li>Monthly review sessions with construction engineers validate metric accuracy</li>
+                            <li>Remaining Work analysis provides valuable forward-looking insights</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Benefits & Practical Application</h2>
+            <div class="benefits-content">
+                <div class="benefit-category">
+                    <h3>Early Problem Detection</h3>
+                    <div class="benefit-details">
+                        <div class="icon-box">🔍</div>
+                        <p>EVM provides early warning indicators when SPI or CPI fall below 1.0, enabling proactive interventions before issues become critical. In the Rā Hihi project, early CPI variations led to process improvements that ultimately saved 4% on costs.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-category">
+                    <h3>Enhanced Decision Making</h3>
+                    <div class="benefit-details">
+                        <div class="icon-box">📊</div>
+                        <p>Objective performance metrics replace subjective assessments. Managers can make data-driven decisions about resource allocation, schedule compression, or scope adjustments based on quantitative analysis.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-category">
+                    <h3>Improved Stakeholder Communication</h3>
+                    <div class="benefit-details">
+                        <div class="icon-box">💬</div>
+                        <p>Standardized metrics provide a common language for discussing project performance. Visual dashboards make complex data accessible to all stakeholders, from board members to field engineers.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-category">
+                    <h3>Compliance & Governance</h3>
+                    <div class="benefit-details">
+                        <div class="icon-box">✅</div>
+                        <p>Meets NZTA's new requirements for projects over $5M. Provides auditable performance records and supports contractual claims with objective data.</p>
+                    </div>
+                </div>
+
+                <div class="application-guide">
+                    <h3>Practical Application Guide</h3>
+                    <div class="guide-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">Month 1</div>
+                            <div class="timeline-content">
+                                <h4>Setup & Integration</h4>
+                                <p>Map cost codes to activities, establish baseline, configure reporting platform</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">Month 2+</div>
+                            <div class="timeline-content">
+                                <h4>Monthly Updates</h4>
+                                <p>Update progress, reconcile costs, calculate metrics, review with team</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">Ongoing</div>
+                            <div class="timeline-content">
+                                <h4>Performance Management</h4>
+                                <p>Analyze trends, implement corrections, forecast completion, communicate results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="section">
+        <div class="container">
+            <h2 class="section-title">Conclusion & Recommendations</h2>
+            <div class="conclusion-content">
+                <div class="conclusion-summary">
+                    <h3>Research Summary</h3>
+                    <p>This research demonstrates that Earned Value Management can be successfully implemented in New Zealand construction projects using existing tools and systems. The Rā Hihi case study proves that EVM delivers tangible benefits including cost savings, schedule optimization, and enhanced project control.</p>
+
+                    <p>The proposed framework addresses the gap between EVM theory and practical application, providing clear guidelines tailored to New Zealand's construction environment. By leveraging familiar tools and focusing on integration rather than replacement, organizations can achieve effective EVM implementation without significant disruption.</p>
+                </div>
+
+                <div class="recommendations">
+                    <h3>Key Recommendations</h3>
+                    <div class="recommendation-cards">
+                        <div class="rec-card">
+                            <h4>For Project Managers</h4>
+                            <ul>
+                                <li>Start with existing CBS and scheduling systems</li>
+                                <li>Focus on accurate cost-activity mapping</li>
+                                <li>Implement monthly review processes</li>
+                                <li>Use accessible reporting platforms</li>
+                            </ul>
+                        </div>
+                        <div class="rec-card">
+                            <h4>For Organizations</h4>
+                            <ul>
+                                <li>Invest in data integration capabilities</li>
+                                <li>Provide EVM training for project teams</li>
+                                <li>Standardize implementation approaches</li>
+                                <li>Support pilot projects for learning</li>
+                            </ul>
+                        </div>
+                        <div class="rec-card">
+                            <h4>For Industry</h4>
+                            <ul>
+                                <li>Develop NZ-specific EVM guidelines</li>
+                                <li>Share implementation case studies</li>
+                                <li>Collaborate on best practices</li>
+                                <li>Advocate for consistent standards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="future-work">
+                    <h3>Future Research Directions</h3>
+                    <p>Further research is recommended in the following areas:</p>
+                    <ul>
+                        <li>Development of New Zealand-specific EVM standards aligned with local practices</li>
+                        <li>Integration of EVM with emerging technologies (AI, machine learning, IoT)</li>
+                        <li>Comparative studies across different project types and scales</li>
+                        <li>Investigation of EVM application in sustainable construction practices</li>
+                    </ul>
+                </div>
+
+                <div class="closing-statement">
+                    <p class="emphasis">With NZTA's new requirements and increasing project complexity, EVM adoption is no longer optional but essential for New Zealand's construction industry. This research provides the practical framework needed to make that transition successful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Contact & Resources</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>For more information about this research or to discuss EVM implementation in your projects:</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <p>research@evmnz.example.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏢</span>
+                            <p>Construction Management Research<br>Auckland, New Zealand</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resources">
+                    <h3>Additional Resources</h3>
+                    <ul class="resource-list">
+                        <li><a href="#">Download Full Research Report (PDF)</a></li>
+                        <li><a href="#">EVM Implementation Checklist</a></li>
+                        <li><a href="#">Power BI Dashboard Templates</a></li>
+                        <li><a href="#">NZTA Physical Works Schedule Standard</a></li>
+                        <li><a href="#">International EVM Standards Comparison</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 EVM Research Project. All rights reserved.</p>
+            <p>Research Status: 80% Complete | Last Updated: December 2024</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
