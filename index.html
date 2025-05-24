@@ -135,7 +135,7 @@
         <div class="container">
             <h2 class="section-title">The Proposed EVM Framework</h2>
             <div class="framework-content">
-                <p class="framework-intro">Based on research findings and the Rā Hihi case study, this framework provides practical guidelines for implementing EVM in New Zealand construction projects.</p>
+                <p class="framework-intro">Based on research findings and the infrastructure flyover case study, this framework provides practical guidelines for implementing EVM in New Zealand construction projects.</p>
                 
                 <div class="framework-steps">
                     <div class="step">
@@ -237,58 +237,86 @@
     <!-- Dashboards Section -->
     <section id="dashboards" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Interactive EVM Dashboards</h2>
+            <h2 class="section-title">Interactive EVM Dashboard</h2>
             <p class="section-subtitle">Explore key EVM metrics and visualizations based on typical construction project scenarios</p>
             
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>S-Curve Analysis</h3>
-                    <p>Traditional EVM S-Curve showing Planned Value, Earned Value, and Actual Cost over time</p>
-                    <canvas id="sCurveChart"></canvas>
-                    <div class="metrics-row">
-                        <div class="metric">
-                            <span class="metric-label">SPI</span>
-                            <span class="metric-value" id="spiValue">0.95</span>
+            <div class="interactive-demo">
+                <div class="dashboard-main">
+                    <div class="chart-container">
+                        <canvas id="evmChart" class="chart"></canvas>
+                    </div>
+
+                    <div class="controls-panel">
+                        <div class="control-group">
+                            <label class="control-label">Project Progress (%)</label>
+                            <div class="control-value" id="progressValue">50%</div>
+                            <input type="range" id="progressSlider" min="0" max="100" value="50" step="5">
                         </div>
-                        <div class="metric">
-                            <span class="metric-label">CPI</span>
-                            <span class="metric-value" id="cpiValue">1.03</span>
+
+                        <div class="control-group">
+                            <label class="control-label">Schedule Performance</label>
+                            <div class="control-value" id="scheduleValue">On Schedule</div>
+                            <input type="range" id="scheduleSlider" min="-30" max="30" value="0" step="5">
                         </div>
-                        <div class="metric">
-                            <span class="metric-label">EAC</span>
-                            <span class="metric-value" id="eacValue">$9.7M</span>
+
+                        <div class="control-group">
+                            <label class="control-label">Cost Performance</label>
+                            <div class="control-value" id="costValue">On Budget</div>
+                            <input type="range" id="costSlider" min="50" max="150" value="100" step="5">
                         </div>
                     </div>
                 </div>
 
-                <div class="dashboard-card">
-                    <h3>Performance Indices Trend</h3>
-                    <p>Monthly tracking of Schedule and Cost Performance Indices</p>
-                    <canvas id="performanceChart"></canvas>
-                    <div class="chart-legend">
-                        <span class="legend-item spi">SPI - Schedule Performance</span>
-                        <span class="legend-item cpi">CPI - Cost Performance</span>
+                <div class="metrics-panel">
+                    <h3>Key Performance Indicators</h3>
+                    <div class="performance-indicators">
+                        <div class="indicator" id="spiIndicator">
+                            <div class="indicator-value" id="spiValue">1.00</div>
+                            <div class="indicator-label">SPI (Schedule)</div>
+                        </div>
+                        <div class="indicator" id="cpiIndicator">
+                            <div class="indicator-value" id="cpiValue">1.00</div>
+                            <div class="indicator-label">CPI (Cost)</div>
+                        </div>
+                        <div class="indicator" id="svIndicator">
+                            <div class="indicator-value" id="svValue">$0</div>
+                            <div class="indicator-label">Schedule Variance</div>
+                        </div>
+                        <div class="indicator" id="cvIndicator">
+                            <div class="indicator-value" id="cvValue">$0</div>
+                            <div class="indicator-label">Cost Variance</div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="dashboard-card">
-                    <h3>Variance Analysis</h3>
-                    <p>Cost and Schedule variances by project phase</p>
-                    <canvas id="varianceChart"></canvas>
-                </div>
-
-                <div class="dashboard-card">
-                    <h3>Benefits Visualization</h3>
-                    <p>Key benefits of EVM implementation</p>
-                    <canvas id="benefitsChart"></canvas>
+                    <div class="metric-explanations">
+                        <div class="metric-card compact" onclick="highlightMetric(this)">
+                            <div class="metric-icon">📊</div>
+                            <h4>Planned Value (PV)</h4>
+                            <p>The authorized budget for scheduled work</p>
+                        </div>
+                        <div class="metric-card compact" onclick="highlightMetric(this)">
+                            <div class="metric-icon">✅</div>
+                            <h4>Earned Value (EV)</h4>
+                            <p>The value of work actually performed</p>
+                        </div>
+                        <div class="metric-card compact" onclick="highlightMetric(this)">
+                            <div class="metric-icon">💰</div>
+                            <h4>Actual Cost (AC)</h4>
+                            <p>The actual cost incurred for work performed</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="dashboard-controls">
-                <button class="control-btn active" onclick="updateScenario('baseline')">Baseline Scenario</button>
-                <button class="control-btn" onclick="updateScenario('delayed')">Delayed Project</button>
-                <button class="control-btn" onclick="updateScenario('accelerated')">Accelerated Project</button>
-                <button class="control-btn" onclick="updateScenario('overbudget')">Over Budget Project</button>
+            <div class="dashboard-secondary">
+                <div class="dashboard-card half-width">
+                    <h3>Variance Analysis by Phase</h3>
+                    <canvas id="varianceChart"></canvas>
+                </div>
+                <div class="dashboard-card half-width">
+                    <h3>EVM Benefits Comparison</h3>
+                    <canvas id="benefitsChart"></canvas>
+                </div>
             </div>
         </div>
     </section>
@@ -296,14 +324,14 @@
     <!-- Case Study Section -->
     <section id="case-study" class="section">
         <div class="container">
-            <h2 class="section-title">Case Study: Rā Hihi Flyover Project</h2>
+            <h2 class="section-title">Case Study: Major Infrastructure Flyover Project</h2>
             <div class="case-study-content">
                 <div class="case-overview">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect fill='%23f0f0f0' width='800' height='400'/%3E%3Cpath d='M50 300 Q200 200 350 300 T650 300' stroke='%23333' stroke-width='8' fill='none'/%3E%3Crect x='100' y='280' width='40' height='80' fill='%23666'/%3E%3Crect x='300' y='280' width='40' height='80' fill='%23666'/%3E%3Crect x='500' y='280' width='40' height='80' fill='%23666'/%3E%3Ctext x='400' y='380' text-anchor='middle' font-family='Arial' font-size='16' fill='%23333'%3ERā Hihi Flyover Illustration%3C/text%3E%3C/svg%3E" alt="Rā Hihi Flyover" class="case-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect fill='%23f0f0f0' width='800' height='400'/%3E%3Cpath d='M50 300 Q200 200 350 300 T650 300' stroke='%23333' stroke-width='8' fill='none'/%3E%3Crect x='100' y='280' width='40' height='80' fill='%23666'/%3E%3Crect x='300' y='280' width='40' height='80' fill='%23666'/%3E%3Crect x='500' y='280' width='40' height='80' fill='%23666'/%3E%3Ctext x='400' y='380' text-anchor='middle' font-family='Arial' font-size='16' fill='%23333'%3EFlyover Project Illustration%3C/text%3E%3C/svg%3E" alt="Flyover Project" class="case-image">
                     <div class="case-details">
                         <h3>Project Overview</h3>
                         <ul>
-                            <li><strong>Project:</strong> Reeves Road Flyover (Rā Hihi)</li>
+                            <li><strong>Project Type:</strong> Major Road Flyover</li>
                             <li><strong>Location:</strong> Auckland, New Zealand</li>
                             <li><strong>Duration:</strong> March 2024 - October 2025</li>
                             <li><strong>Structure:</strong> 600m long, 10m high bridge</li>
@@ -372,7 +400,7 @@
                     <h3>Early Problem Detection</h3>
                     <div class="benefit-details">
                         <div class="icon-box">🔍</div>
-                        <p>EVM provides early warning indicators when SPI or CPI fall below 1.0, enabling proactive interventions before issues become critical. In the Rā Hihi project, early CPI variations led to process improvements that ultimately saved 4% on costs.</p>
+                        <p>EVM provides early warning indicators when SPI or CPI fall below 1.0, enabling proactive interventions before issues become critical. In the flyover project case study, early CPI variations led to process improvements that ultimately saved 4% on costs.</p>
                     </div>
                 </div>
 
@@ -437,7 +465,7 @@
             <div class="conclusion-content">
                 <div class="conclusion-summary">
                     <h3>Research Summary</h3>
-                    <p>This research demonstrates that Earned Value Management can be successfully implemented in New Zealand construction projects using existing tools and systems. The Rā Hihi case study proves that EVM delivers tangible benefits including cost savings, schedule optimization, and enhanced project control.</p>
+                    <p>This research demonstrates that Earned Value Management can be successfully implemented in New Zealand construction projects using existing tools and systems. The infrastructure flyover case study proves that EVM delivers tangible benefits including cost savings, schedule optimization, and enhanced project control.</p>
 
                     <p>The proposed framework addresses the gap between EVM theory and practical application, providing clear guidelines tailored to New Zealand's construction environment. By leveraging familiar tools and focusing on integration rather than replacement, organizations can achieve effective EVM implementation without significant disruption.</p>
                 </div>
